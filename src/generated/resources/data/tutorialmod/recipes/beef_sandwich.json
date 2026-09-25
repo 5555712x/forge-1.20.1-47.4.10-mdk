@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "@": {
+      "item": "minecraft:cooked_beef"
+    },
+    "S": {
+      "item": "minecraft:bread"
+    }
+  },
+  "pattern": [
+    " S ",
+    " @ ",
+    " S "
+  ],
+  "result": {
+    "item": "tutorialmod:beef_sandwich"
+  },
+  "show_notification": true
+}

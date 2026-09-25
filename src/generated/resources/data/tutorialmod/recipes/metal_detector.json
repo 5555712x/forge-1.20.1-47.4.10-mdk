@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "!": {
+      "item": "minecraft:redstone"
+    },
+    "#": {
+      "item": "minecraft:diamond"
+    },
+    "S": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    " SS",
+    " S ",
+    "#! "
+  ],
+  "result": {
+    "item": "tutorialmod:metal_detector"
+  },
+  "show_notification": true
+}

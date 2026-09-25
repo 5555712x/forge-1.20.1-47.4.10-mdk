@@ -9,7 +9,6 @@
 		{
 			"from": [7, 14, 7],
 			"to": [9, 17, 9],
-			"rotation": {"angle": 0, "axis": "y", "origin": [7, 14, 7]},
 			"faces": {
 				"north": {"uv": [4, 0, 6, 3], "texture": "#0"},
 				"east": {"uv": [4, 3, 6, 6], "texture": "#0"},
@@ -22,7 +21,6 @@
 		{
 			"from": [8, 4, 8],
 			"to": [8.5, 14, 8.5],
-			"rotation": {"x": -2.5, "y": 0, "z": 2.5, "origin": [7, 4, 8]},
 			"faces": {
 				"north": {"uv": [0, 0, 1, 10], "texture": "#0"},
 				"east": {"uv": [1, 0, 2, 10], "texture": "#0"},
@@ -40,5 +38,14 @@
 		"thirdperson_lefthand": {
 			"translation": [0, 0, 1]
 		}
-	}
+	},
+	"groups": [
+		{
+			"name": "marshmallow_skewers_3d",
+			"origin": [8, 8, 8],
+			"scope": 0,
+			"color": 0,
+			"children": [0, 1]
+		}
+	]
 }

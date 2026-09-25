@@ -2,17 +2,17 @@
   "parent": "minecraft:item/generated",
   "loader": "forge:separate_transforms",
   "base": {
-    "parent": "tutorialmod:item/metal_detector_3d"
+    "parent": "tutorialmod:item/the_block_sword_3d"
   },
   "perspectives": {
     "gui": {
-      "parent": "tutorialmod:item/metal_detector_2d"
+      "parent": "tutorialmod:item/the_block_sword_2d"
     },
     "ground": {
-      "parent": "tutorialmod:item/metal_detector_2d"
+      "parent": "tutorialmod:item/the_block_sword_2d"
     },
     "fixed": {
-      "parent": "tutorialmod:item/metal_detector_2d"
+      "parent": "tutorialmod:item/the_block_sword_2d"
     }
   }
 }

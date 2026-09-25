@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "S": {
+      "item": "tutorialmod:sapphire"
+    }
+  },
+  "pattern": [
+    "SSS",
+    " # ",
+    " # "
+  ],
+  "result": {
+    "item": "tutorialmod:sapphire_pickaxe"
+  },
+  "show_notification": true
+}

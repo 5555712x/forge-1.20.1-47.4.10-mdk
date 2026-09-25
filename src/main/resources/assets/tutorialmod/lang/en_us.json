@@ -1,0 +1,60 @@
+{
+  "item.tutorialmod.sapphire": "藍寶石",
+  "item.tutorialmod.ruby": "紅寶石",
+  "item.tutorialmod.raw_sapphire": "生藍寶石",
+  "item.tutorialmod.metal_detector": "鑽石/鐵礦探測器",
+
+  "item.tutorialmod.marshmallow_skewers": "棉花糖串",
+  "item.tutorialmod.beef_sandwich": "牛肉三明治",
+
+  "item.tutorialmod.small_coal": "小煤炭",
+
+  "block.tutorialmod.sapphire_block": "藍寶石磚",
+  "block.tutorialmod.ruby_block": "紅寶石磚",
+  "block.tutorialmod.raw_sapphire_block": "生藍寶石磚",
+
+  "block.tutorialmod.sound_block": "音樂方塊",
+
+  "block.tutorialmod.sapphire_ore": "藍寶石礦",
+  "block.tutorialmod.deepslate_sapphire_ore": "深板岩藍寶石礦",
+  "block.tutorialmod.nether_sapphire_ore": "地獄藍寶石礦",
+  "block.tutorialmod.end_stone_sapphire_ore": "終界藍寶石礦",
+
+  "block.tutorialmod.sapphire_stairs": "藍寶石階梯",
+  "block.tutorialmod.sapphire_slab": "藍寶石半磚",
+  "block.tutorialmod.sapphire_button": "藍寶石按鈕",
+  "block.tutorialmod.sapphire_pressure_plate": "藍寶石壓力板",
+  "block.tutorialmod.sapphire_fence": "藍寶石柵欄",
+  "block.tutorialmod.sapphire_fence_gate": "藍寶石柵欄門",
+  "block.tutorialmod.sapphire_wall": "藍寶石牆",
+  "block.tutorialmod.sapphire_door": "藍寶石門",
+  "block.tutorialmod.sapphire_trapdoor": "藍寶石活板門",
+
+
+  "item.tutorialmod.sapphire_sword": "藍寶石劍",
+  "item.tutorialmod.sapphire_spear": "藍寶石矛",
+  "item.tutorialmod.sapphire_pickaxe": "藍寶石鎬",
+  "item.tutorialmod.sapphire_axe": "藍寶石斧",
+  "item.tutorialmod.sapphire_shovel": "藍寶石鏟",
+  "item.tutorialmod.sapphire_hoe": "藍寶石鋤",
+  "item.tutorialmod.sapphire_pickaxe_and_axe": "藍寶石鎬斧",
+
+  "item.tutorialmod.atomic_samurai_sword": "原子之劍",
+  "item.tutorialmod.one_punch": "連續拳",
+
+  "item.tutorialmod.the_block_sword": "格擋之劍",
+
+
+  "item.tutorialmod.sapphire_helmet": "藍寶石頭盔",
+  "item.tutorialmod.sapphire_chestplate": "藍寶石胸甲",
+  "item.tutorialmod.sapphire_leggings": "藍寶石護腿",
+  "item.tutorialmod.sapphire_boots": "藍寶石靴",
+
+
+
+
+  "tooltip.tutorialmod.metal_detector.tooltip": "找到一定距離內下方的礦石",
+
+
+  "creativetab.tutorial_tab": "tutorialmod"
+}

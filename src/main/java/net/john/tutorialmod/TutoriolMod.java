@@ -1,7 +1,14 @@
 package net.john.tutorialmod;
 
 import com.mojang.logging.LogUtils;
+import net.john.tutorialmod.block.ModBlocks;
+import net.john.tutorialmod.item.ModCreativeModTabs;
+import net.john.tutorialmod.item.ModItems;
+import net.john.tutorialmod.loot.ModLootModifiers;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.common.CreativeModeTabRegistry;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -18,23 +25,27 @@ import org.slf4j.Logger;
 @Mod(TutoriolMod.MOD_ID)
 
 public class TutoriolMod {
-
-    // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "tutorialmod";
-    // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public TutoriolMod(FMLJavaModLoadingContext context) {
-
         IEventBus modEventBus = context.getModEventBus();
+
+        ModCreativeModTabs.register(modEventBus);
+
+
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
+        ModLootModifiers.register(modEventBus);
+
 
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
 
         modEventBus.addListener(this::addCreative);
-
-        context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
@@ -43,6 +54,11 @@ public class TutoriolMod {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.SAPPHIRE);
+            event.accept(ModItems.RUBY);
+            event.accept(ModItems.RAW_SAPPHIRE);
+        }
 
     }
 
@@ -58,7 +74,7 @@ public class TutoriolMod {
 
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
+            net.john.tutorialmod.client.PlayerPunchAnimation.registerFactory();
         }
     }
 }

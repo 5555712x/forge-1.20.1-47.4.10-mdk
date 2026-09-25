@@ -59,7 +59,7 @@ public class ArmorEffectHandler {
     private static void applyEffect(Player player, MobEffect effect) {
         MobEffectInstance current = player.getEffect(effect);
 
-        if (current == null || current.getDuration() < 80) {
+        if (current == null || current.getDuration() < 210) {
             player.addEffect(new MobEffectInstance(
                     effect,
                     EFFECT_DURATION, // 持續時間
