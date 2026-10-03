@@ -59,6 +59,17 @@ public class TutoriolMod {
             event.accept(ModItems.RUBY);
             event.accept(ModItems.RAW_SAPPHIRE);
         }
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.SAPPHIRE_BLOCK);
+            event.accept(ModBlocks.SAPPHIRE_SLAB);
+            event.accept(ModBlocks.SAPPHIRE_STAIRS);
+            event.accept(ModBlocks.SAPPHIRE_DOOR);
+            event.accept(ModBlocks.SAPPHIRE_TRAPDOOR);
+            event.accept(ModBlocks.SAPPHIRE_FENCE);
+            event.accept(ModBlocks.SAPPHIRE_FENCE_GATE);
+            event.accept(ModBlocks.SAPPHIRE_WALL);
+            event.accept(ModBlocks.RUBY_BLOCK);
+        }
 
     }
 

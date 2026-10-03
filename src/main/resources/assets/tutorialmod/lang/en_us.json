@@ -6,8 +6,15 @@
 
   "item.tutorialmod.marshmallow_skewers": "棉花糖串",
   "item.tutorialmod.beef_sandwich": "牛肉三明治",
+  "item.tutorialmod.winnie_honey": "維尼蜂蜜",
+  "item.tutorialmod.roasted_beets": "烤甜菜",
 
   "item.tutorialmod.small_coal": "小煤炭",
+
+
+  "item.tutorialmod.corn_seeds": "小玉米種子",
+  "item.tutorialmod.corn": "小玉米",
+
 
   "block.tutorialmod.sapphire_block": "藍寶石磚",
   "block.tutorialmod.ruby_block": "紅寶石磚",
@@ -18,6 +25,7 @@
   "block.tutorialmod.sapphire_ore": "藍寶石礦",
   "block.tutorialmod.deepslate_sapphire_ore": "深板岩藍寶石礦",
   "block.tutorialmod.nether_sapphire_ore": "地獄藍寶石礦",
+  "block.tutorialmod.nether_ruby_ore": "地獄紅寶石礦",
   "block.tutorialmod.end_stone_sapphire_ore": "終界藍寶石礦",
 
   "block.tutorialmod.sapphire_stairs": "藍寶石階梯",

@@ -1,5 +1,7 @@
-// 1.20.1	2026-09-25T14:17:04.6625794	Recipes
+// 1.20.1	2026-10-01T18:50:34.3851588	Recipes
+87b3cee8f5aabeb52112ae4ea100066ac66482e4 data/tutorialmod/advancements/recipes/food/roasted_beetsroasted_beets_beetroot.json
 65e818c58b4a4ef0773bdcb4277031b6eb3500e4 data/tutorialmod/advancements/recipes/misc/beef_sandwich.json
+b0acea19949c969e6e5ad1fdbb2feb7d18d652bd data/tutorialmod/advancements/recipes/misc/corn_seeds.json
 4513efecf0e0dac392424179c2913596ecd48df2 data/tutorialmod/advancements/recipes/misc/metal_detector.json
 f6a2f3bbf7ba4bba278baeec37fcef65e6652a0a data/tutorialmod/advancements/recipes/misc/one_punch.json
 1f92061ff13a75e1ea3f6b297bac05de8984fbb1 data/tutorialmod/advancements/recipes/misc/ruby.json
@@ -29,9 +31,12 @@ abe650fa2ca27c4eda998404b4b438306ab8cad2 data/tutorialmod/advancements/recipes/m
 ffddc2b3a27db6a37daca4c6e7bcd5d3fb0267b1 data/tutorialmod/advancements/recipes/misc/sapphire_sword.json
 aeb6c2a526842f11c6bdef1e4cb66a5964d609eb data/tutorialmod/advancements/recipes/misc/small_coal.json
 fa43ceb1a152930e99db2d401d9ea98e4b7b9ef0 data/tutorialmod/advancements/recipes/misc/the_block_sword.json
+0a1eb20ef15863ab9006bde585f4135f13f834ad data/tutorialmod/advancements/recipes/misc/winnie_honey.json
 9c942ea74961bd795a67e18079004ca39a236c78 data/tutorialmod/recipes/beef_sandwich.json
+06c55012800ba31af7e7ead6e1a8c2af77223121 data/tutorialmod/recipes/corn_seeds.json
 d42f877a2be835f4c1bb218e33995ec6b3cd5294 data/tutorialmod/recipes/metal_detector.json
 a78c2308d61509bd873e88d98205656b2bae5885 data/tutorialmod/recipes/one_punch.json
+9d5a4efce72bbc0ef1bcfdfed4b5173284c15e52 data/tutorialmod/recipes/roasted_beetsroasted_beets_beetroot.json
 777deee86b6237b1573bc26dece525a2874531e2 data/tutorialmod/recipes/ruby.json
 c49ec55731a06c0e36c50447ced7101811a6c78a data/tutorialmod/recipes/ruby_block.json
 48be58de9eb2bbd91b313172ec81ea30739b1da8 data/tutorialmod/recipes/sapphire.json
@@ -59,3 +64,4 @@ f87b8c90a683c22cabda01bdfe862ddc88eeba28 data/tutorialmod/recipes/sapphire_spear
 47faaf5ec732f6cdbbed74a0cc34e44c1297dc9d data/tutorialmod/recipes/sapphire_sword.json
 4dec0f1a2fc31d239f646f3ade15c63e4508bbed data/tutorialmod/recipes/small_coal.json
 46246e125571c7f17d933368f88845a63a362722 data/tutorialmod/recipes/the_block_sword.json
+b47063e2ed6cf706c3c428a44bde93ea1a4f6105 data/tutorialmod/recipes/winnie_honey.json

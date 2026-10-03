@@ -20,8 +20,8 @@ import net.minecraftforge.fml.common.Mod;
 @Mod.EventBusSubscriber(modid = TutoriolMod.MOD_ID, value = Dist.CLIENT)
 public class PlayerPunchAnimation {
 
-    private static final ResourceLocation LAYER_ID = ResourceLocation.parse(TutoriolMod.MOD_ID + ":punch_layer");
-    private static final ResourceLocation ANIM_ID = ResourceLocation.parse(TutoriolMod.MOD_ID + ":punch");
+    private static final ResourceLocation LAYER_ID = new ResourceLocation(TutoriolMod.MOD_ID + ":punch_layer");
+    private static final ResourceLocation ANIM_ID = new ResourceLocation(TutoriolMod.MOD_ID + ":punch");
 
     public static void registerFactory() {
         PlayerAnimationFactory.ANIMATION_DATA_FACTORY.registerFactory(

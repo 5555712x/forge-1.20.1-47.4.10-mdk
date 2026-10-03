@@ -44,7 +44,7 @@ public class PunchItem extends SwordItem {
 
     @Override
     public AABB getSweepHitBox(ItemStack stack, Player player, net.minecraft.world.entity.Entity target) {
-        return null;
+        return new AABB(0.0D, 0.0D, 0.0D, 0.0D, 0.0D, 0.0D);
     }
 
     @Override

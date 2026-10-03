@@ -1,6 +1,9 @@
-// 1.20.1	2026-09-25T14:17:04.6660938	Item Models: tutorialmod
+// 1.20.1	2026-09-30T23:44:08.5478308	Item Models: tutorialmod
 ade5c3d42e76ae64995e7452d64df7d7c09b06ea assets/tutorialmod/models/item/beef_sandwich.json
+6126e26da373f9113d9e9be875b14a0d13857444 assets/tutorialmod/models/item/corn.json
+4c5c277fa6360b149d6c3ab20584fcc4450cda27 assets/tutorialmod/models/item/corn_seeds.json
 d24305376f58c1ef118279a5c8f5b087a07b1d47 assets/tutorialmod/models/item/raw_sapphire.json
+730f316e09d4db33a86a1e5398374d7403cb23d1 assets/tutorialmod/models/item/roasted_beets.json
 d07fad06b4e5a92363d8d18e034dbd6a8641d34d assets/tutorialmod/models/item/ruby.json
 0a16bffc527696b64e4304b7efccfda93e2b9422 assets/tutorialmod/models/item/sapphire.json
 72e891dd0d4eeff5cd14ecf7f4740f6ba5e7017b assets/tutorialmod/models/item/sapphire_axe.json
@@ -62,3 +65,4 @@ e9aa9e3feee2e040f2908d291e5fa066bb7904c6 assets/tutorialmod/models/item/sapphire
 57b0c78a4d68b08f0db44e21a63411abf9c21b70 assets/tutorialmod/models/item/sapphire_trapdoor.json
 8822d7daa71ae6a7f4091c85362a2480e52d0c06 assets/tutorialmod/models/item/sapphire_wall.json
 45320d14b10751822794b39ed232724ddbbd3f76 assets/tutorialmod/models/item/small_coal.json
+7e6eb1cc7307482f0760f06e4993b6066b7a3ec6 assets/tutorialmod/models/item/winnie_honey.json

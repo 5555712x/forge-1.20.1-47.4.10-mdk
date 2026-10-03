@@ -2,12 +2,18 @@ package net.john.tutorialmod.datagen;
 
 import net.john.tutorialmod.TutoriolMod;
 import net.john.tutorialmod.block.ModBlocks;
+import net.john.tutorialmod.block.custom.CornCropBlock;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 import org.apache.commons.compress.compressors.lz77support.LZ77Compressor;
+
+import java.util.function.Function;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -43,8 +49,21 @@ public class ModBlockStateProvider extends BlockStateProvider {
         trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.SAPPHIRE_TRAPDOOR.get()), modLoc("block/sapphire_trapdoor"), true, "cutout");
 
 
+        makeCornCrop((CropBlock) ModBlocks.CORN_CROP.get(), "corn_stage", "corn_stage");
+    }
 
+    public void makeCornCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> cornStates(state, block, modelName, textureName);
 
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] cornStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((CornCropBlock) block).getAgeProperty()),
+                new ResourceLocation(TutoriolMod.MOD_ID, "block/" + textureName + state.getValue(((CornCropBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

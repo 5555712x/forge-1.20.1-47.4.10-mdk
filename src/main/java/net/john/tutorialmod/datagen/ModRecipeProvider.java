@@ -40,6 +40,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
         oreBlasting(pWriter, SAPPHIRE_SMELTABLES, RecipeCategory.MISC, ModItems.SAPPHIRE.get(), 0.25f, 100, "sapphire");
         oreSmelting(pWriter, SAPPHIRE_SMELTABLES, RecipeCategory.MISC, ModItems.SAPPHIRE.get(), 0.25f, 200, "sapphire");
+        oreCooking(
+                pWriter,
+                RecipeSerializer.SMELTING_RECIPE,
+                List.of(Items.BEETROOT),         // 第 3 個：將甜菜根包成清單傳進去
+                RecipeCategory.FOOD,            // 第 4 個：食譜分類
+                ModItems.ROASTED_BEETS.get(),   // 第 5 個：產出物
+                0.25f,                          // 第 6 個：經驗值
+                300,                            // 第 7 個：燒煉時間
+                "",                             // 第 8 個：群組
+                "roasted_beets"                 // 第 9 個：後綴
+        );
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SAPPHIRE_BLOCK.get())
                 .pattern("SSS")
@@ -205,6 +216,20 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('@',Ingredient.of(Items.NETHERITE_INGOT))
                 .define('A',Ingredient.of(Items.IRON_INGOT))
                 .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.WINNIE_HONEY.get())
+                .pattern(" SS")
+                .pattern(" SA")
+                .pattern("   ")
+                .define('S',Ingredient.of(Items.HONEY_BOTTLE))
+                .define('A',Ingredient.of(Items.SUGAR))
+                .unlockedBy(getHasName(Items.HONEY_BOTTLE), has(Items.HONEY_BOTTLE))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CORN_SEEDS.get(), 4)
+                .requires(ModItems.CORN.get())
+                .unlockedBy(getHasName(ModItems.CORN.get()), has(ModItems.CORN.get()))
                 .save(pWriter);
     }
 

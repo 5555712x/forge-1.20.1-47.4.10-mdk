@@ -1,11 +1,11 @@
-// 1.20.1	2026-09-13T17:39:56.6434251	Tags for minecraft:block mod id tutorialmod
+// 1.20.1	2026-09-27T12:50:38.2981622	Tags for minecraft:block mod id tutorialmod
 f7d4d746a89ba9704d89651d20d3b89098acdabd data/forge/tags/blocks/needs_netherite_tool.json
 eb9c3bd4f434cd2ee198618689887868a03fc824 data/minecraft/tags/blocks/fences.json
 0f23036eb868569b86c1fbde92de4c816b9df411 data/minecraft/tags/blocks/fence_gates.json
-d40c9253a45bc27b050c2d65e0601e907131461a data/minecraft/tags/blocks/mineable/pickaxe.json
+ff015c693653df36084fd662de55a1f9ba7a7026 data/minecraft/tags/blocks/mineable/pickaxe.json
 f7d4d746a89ba9704d89651d20d3b89098acdabd data/minecraft/tags/blocks/needs_diamond_tool.json
-e934c1b6a1b182c9b6a667f959a5482cd836215f data/minecraft/tags/blocks/needs_iron_tool.json
+38a401b2384da996d2a336807601b558c4a720a0 data/minecraft/tags/blocks/needs_iron_tool.json
 c3e17f6499e460d9cde84675a8a8edf1d33b1d71 data/minecraft/tags/blocks/needs_stone_tool.json
 39afac99ef2666de5a9686ccfc15e6f7611922c8 data/minecraft/tags/blocks/walls.json
 031ec7111c8b7c57f798acd0b3605ceb1912498b data/tutorialmod/tags/blocks/metal_detector_valuables.json
-e934c1b6a1b182c9b6a667f959a5482cd836215f data/tutorialmod/tags/blocks/need_sapphire_tool.json
+38a401b2384da996d2a336807601b558c4a720a0 data/tutorialmod/tags/blocks/need_sapphire_tool.json

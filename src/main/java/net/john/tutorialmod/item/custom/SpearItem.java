@@ -6,11 +6,9 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
-import net.minecraft.world.phys.AABB;
 import net.minecraftforge.common.ForgeMod;
 
 import java.util.UUID;
@@ -37,12 +35,16 @@ public class SpearItem extends SwordItem {
     }
 
     /**
-     * 禁用劍的橫掃效果。
-     * Forge 把橫掃邏輯抽出為 getSweepHitBox，回傳 null 即停用。
+     * 完全移除劍的橫掃：回傳 false 後，flag3 為 false，
+     * 原版就不會跑橫掃傷害、白色刃氣粒子和 sweep 音效，
+     * 改播一般的強攻擊音效（跟斧頭等非橫掃武器相同）。
      */
     @Override
-    public AABB getSweepHitBox(ItemStack stack, Player player, net.minecraft.world.entity.Entity target) {
-        return null;
+    public boolean canPerformAction(ItemStack stack, net.minecraftforge.common.ToolAction action) {
+        if (action == net.minecraftforge.common.ToolActions.SWORD_SWEEP) {
+            return false;
+        }
+        return super.canPerformAction(stack, action);
     }
 
     /**
@@ -85,5 +87,12 @@ public class SpearItem extends SwordItem {
         }
 
         return builder.build();
+    }
+
+    /**
+     * 讓 SpearAttackHandler 可以讀取這把矛的攻擊距離。
+     */
+    public double getAttackRange() {
+        return attackRange;
     }
 }

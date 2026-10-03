@@ -1,6 +1,7 @@
 package net.john.tutorialmod.block;
 
 import net.john.tutorialmod.TutoriolMod;
+import net.john.tutorialmod.block.custom.CornCropBlock;
 import net.john.tutorialmod.block.custom.SoundBlock;
 import net.john.tutorialmod.item.ModItems;
 import net.minecraft.sounds.SoundEvent;
@@ -75,6 +76,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> NETHER_RUBY_ORE = registerBlock("nether_ruby_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.NETHERRACK)
                     .strength(2f).requiresCorrectToolForDrops(), UniformInt.of(20,30)));
+
+    public static final RegistryObject<Block> CORN_CROP = BLOCKS.register("corn_crop",
+            () -> new CornCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
 
 
     // 1. 機器的規格說明書

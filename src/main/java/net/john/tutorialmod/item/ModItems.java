@@ -26,9 +26,19 @@ public class ModItems {
             () -> new Item(new Item.Properties().food(ModFoods.MARSHMALLOW_SKEWERS)));
         public static final RegistryObject<Item> BEEF_SANDWICH = ITEMS.register("beef_sandwich",
             () -> new Item(new Item.Properties().food(ModFoods.BEEF_SANDWICH)));
+        public static final RegistryObject<Item> WINNIE_HONEY = ITEMS.register("winnie_honey",
+            () -> new Item(new Item.Properties().food(ModFoods.WINNIE_HONEY)));
+        public static final RegistryObject<Item> CORN = ITEMS.register("corn",
+            () -> new Item(new Item.Properties().food(ModFoods.CORN)));
+        public static final RegistryObject<Item> ROASTED_BEETS = ITEMS.register("roasted_beets",
+            () -> new Item(new Item.Properties().food(ModFoods.ROASTED_BEETS)));
 
         public static final RegistryObject<Item> SMALL_COAL = ITEMS.register("small_coal",
             () -> new FuelItem(new Item.Properties(), 400));
+
+
+        public static final RegistryObject<Item> CORN_SEEDS = ITEMS.register("corn_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.CORN_CROP.get(), new Item.Properties()));
 
 
         public static final RegistryObject<Item> SAPPHIRE_SWORD = ITEMS.register("sapphire_sword",
@@ -58,7 +68,7 @@ public class ModItems {
         // ForgeMod.ATTACK_RANGE 是 Forge 新增的屬性，控制玩家的近戰 raycast 距離
         // 原版預設值是 3.0，這裡用 AttributeModifier 加上額外 2.0（總共 5 格）
         public static final RegistryObject<Item> SAPPHIRE_SPEAR = ITEMS.register("sapphire_spear",
-            () -> new SpearItem(ModToolTiers.SAPPHIRE, 5, -2.6f, 5.0, new Item.Properties()));
+            () -> new SpearItem(ModToolTiers.SAPPHIRE, 5, -2.75f, 5.0, new Item.Properties()));
 
 
         // 藍寶石盔甲：使用 ModArmorItem，讓 ArmorEffectHandler 能識別材質並套用效果

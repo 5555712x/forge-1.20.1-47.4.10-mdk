@@ -1,4 +1,5 @@
-// 1.20.1	2026-09-12T23:51:48.9390338	Loot Tables
+// 1.20.1	2026-09-28T21:27:48.4808657	Loot Tables
+5e9738e75f69fb2110775e6069718096601a64d4 data/tutorialmod/loot_tables/blocks/corn_crop.json
 331d5ec0c3ad6d5081907080e93a14740f77489a data/tutorialmod/loot_tables/blocks/deepslate_sapphire_ore.json
 424ea975a227aa8f24121a1cce579049e72a6886 data/tutorialmod/loot_tables/blocks/end_stone_sapphire_ore.json
 85a601ba909ccfbc002a08f92ebb58d3ab335940 data/tutorialmod/loot_tables/blocks/nether_ruby_ore.json

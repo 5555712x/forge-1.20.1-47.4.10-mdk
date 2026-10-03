@@ -16,5 +16,5 @@ public class ModToolTiers {
     public static final Tier SAPPHIRE  = TierSortingRegistry.registerTier(
             new ForgeTier(2, 150, 8F, 1F, 16,
                     ModTags.Blocks.NEED_SAPPHIRE_TOOL, () -> Ingredient.of(ModItems.SAPPHIRE.get())),
-            ResourceLocation.fromNamespaceAndPath(TutoriolMod.MOD_ID, "sapphire"), List.of(Tiers.IRON), List.of());
+            new ResourceLocation(TutoriolMod.MOD_ID, "sapphire"), List.of(Tiers.IRON), List.of());
 }

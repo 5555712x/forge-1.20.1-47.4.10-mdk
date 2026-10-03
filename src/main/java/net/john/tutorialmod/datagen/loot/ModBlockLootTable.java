@@ -1,7 +1,9 @@
 package net.john.tutorialmod.datagen.loot;
 
 import net.john.tutorialmod.block.ModBlocks;
+import net.john.tutorialmod.block.custom.CornCropBlock;
 import net.john.tutorialmod.item.ModItems;
+import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.flag.FeatureFlags;
@@ -13,6 +15,8 @@ import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -51,6 +55,13 @@ public class ModBlockLootTable extends BlockLootSubProvider {
                 block -> createLikeCopperOreDrops4(ModBlocks.END_STONE_SAPPHIRE_ORE.get(), ModItems.RAW_SAPPHIRE.get()));
         this.add(ModBlocks.NETHER_RUBY_ORE.get(),
                 block -> createLikeCopperOreDrops2(ModBlocks.NETHER_RUBY_ORE.get(), ModItems.RUBY.get()));
+
+        LootItemCondition.Builder lootitemcondition$builder = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.CORN_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CornCropBlock.AGE, 5));
+
+        this.add(ModBlocks.CORN_CROP.get(), createCropDrops(ModBlocks.CORN_CROP.get(), ModItems.CORN.get(),
+                ModItems.CORN_SEEDS.get(), lootitemcondition$builder));
     }
 
 
@@ -86,6 +97,7 @@ public class ModBlockLootTable extends BlockLootSubProvider {
 
 
 
+
     @Override
     protected Iterable<Block> getKnownBlocks() {
         return Set.of(
@@ -104,7 +116,8 @@ public class ModBlockLootTable extends BlockLootSubProvider {
                 ModBlocks.SAPPHIRE_FENCE.get(),
                 ModBlocks.SAPPHIRE_FENCE_GATE.get(),
                 ModBlocks.SAPPHIRE_WALL.get(),
-                ModBlocks.SAPPHIRE_DOOR.get()
+                ModBlocks.SAPPHIRE_DOOR.get(),
+                ModBlocks.CORN_CROP.get()
         );
     }
 }
