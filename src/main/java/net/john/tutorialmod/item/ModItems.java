@@ -39,6 +39,10 @@ public class ModItems {
 
         public static final RegistryObject<Item> CORN_SEEDS = ITEMS.register("corn_seeds",
             () -> new ItemNameBlockItem(ModBlocks.CORN_CROP.get(), new Item.Properties()));
+        public static final RegistryObject<Item> KAOLIANG_SEEDS = ITEMS.register("kaoliang_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.KAOLIANG_CROP.get(), new Item.Properties()));
+        public static final RegistryObject<Item> KAOLIANG = ITEMS.register("kaoliang",
+            () -> new Item(new Item.Properties()));
 
 
         public static final RegistryObject<Item> SAPPHIRE_SWORD = ITEMS.register("sapphire_sword",

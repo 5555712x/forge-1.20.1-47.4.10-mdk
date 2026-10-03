@@ -61,6 +61,8 @@ public class ModCreativeModTabs {
 
                             output.accept(ModItems.CORN_SEEDS.get());
                             output.accept(ModItems.CORN.get());
+                            output.accept(ModItems.KAOLIANG.get());
+                            output.accept(ModItems.KAOLIANG_SEEDS.get());
 
                             //FUEL
                             output.accept(ModItems.SMALL_COAL.get());

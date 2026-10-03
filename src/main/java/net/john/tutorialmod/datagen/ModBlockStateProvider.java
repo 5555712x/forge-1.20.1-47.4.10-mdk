@@ -3,6 +3,8 @@ package net.john.tutorialmod.datagen;
 import net.john.tutorialmod.TutoriolMod;
 import net.john.tutorialmod.block.ModBlocks;
 import net.john.tutorialmod.block.custom.CornCropBlock;
+import net.john.tutorialmod.block.custom.KaoliangCropBLock;
+
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
@@ -50,6 +52,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 
         makeCornCrop((CropBlock) ModBlocks.CORN_CROP.get(), "corn_stage", "corn_stage");
+        makeKaoliangCrop(((CropBlock) ModBlocks.KAOLIANG_CROP.get()), "kaoliang_stage_", "kaoliang_stage_");
     }
 
     public void makeCornCrop(CropBlock block, String modelName, String textureName) {
@@ -58,10 +61,25 @@ public class ModBlockStateProvider extends BlockStateProvider {
         getVariantBuilder(block).forAllStates(function);
     }
 
+
     private ConfiguredModel[] cornStates(BlockState state, CropBlock block, String modelName, String textureName) {
         ConfiguredModel[] models = new ConfiguredModel[1];
         models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((CornCropBlock) block).getAgeProperty()),
                 new ResourceLocation(TutoriolMod.MOD_ID, "block/" + textureName + state.getValue(((CornCropBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
+    }
+
+    public void makeKaoliangCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> kaoliangStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] kaoliangStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((KaoliangCropBLock) block).getAgeProperty()),
+                new ResourceLocation(TutoriolMod.MOD_ID, "block/" + textureName + state.getValue(((KaoliangCropBLock) block).getAgeProperty()))).renderType("cutout"));
 
         return models;
     }

@@ -1,7 +1,10 @@
 package net.john.tutorialmod.block.custom;
 
+import net.john.tutorialmod.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.ItemLike;
@@ -44,30 +47,68 @@ public class KaoliangCropBLock extends CropBlock {
         return SHAPE_BY_AGE[this.getAge(pState)];
     }
 
+    public void randomTick(BlockState pState, ServerLevel pLevel, BlockPos pPos, RandomSource pRandom) {
+        if (!pLevel.isAreaLoaded(pPos, 1)) return;
+        if (pLevel.getRawBrightness(pPos, 0) >= 9) {
+            int currentAge = this.getAge(pState);
+
+            if (currentAge < this.getMaxAge()) {
+                float growthSpeed = getGrowthSpeed(this, pLevel, pPos);
+
+                if (net.minecraftforge.common.ForgeHooks.onCropsGrowPre(pLevel, pPos, pState, pRandom.nextInt((int)(25.0F / growthSpeed) + 1) == 0)) {
+                    if(currentAge == FIRST_STAGE_MAX_AGE) {
+                        if(pLevel.getBlockState(pPos.above(1)).is(Blocks.AIR)) {
+                            pLevel.setBlock(pPos.above(1), this.getStateForAge(currentAge + 1), 2);
+                        }
+                    } else {
+                        pLevel.setBlock(pPos, this.getStateForAge(currentAge + 1), 2);
+                    }
+
+                    net.minecraftforge.common.ForgeHooks.onCropsGrowPost(pLevel, pPos, pState);
+                }
+            }
+        }
+    }
+
     @Override
     public boolean canSustainPlant(BlockState state, BlockGetter world, BlockPos pos, Direction facing, IPlantable plantable) {
         return super.mayPlaceOn(state, world, pos);
-    }//8:42
-     //https://www.youtube.com/watch?v=oLc71hfI42U&list=PLKGarocXCE1H9Y21-pxjt5Pt8bW14twa-&index=22&t=18s
+    }
 
     @Override
     public boolean canSurvive(BlockState pState, LevelReader pLevel, BlockPos pPos) {
         return super.canSurvive(pState, pLevel, pPos) || (pLevel.getBlockState(pPos.below(1)).is(this) &&
-                pLevel.getBlockState(pPos.below(1)).getValue(AGE) == 7);
+                pLevel.getBlockState(pPos.below(1)).getValue(AGE) == 4);
     }
 
     @Override
     public void growCrops(Level pLevel, BlockPos pPos, BlockState pState) {
-        int nextAge = this.getAge(pState) + this.getBonemealAgeIncrease(pLevel);
-        int maxAge = this.getMaxAge();
-        if(nextAge > maxAge) {
-            nextAge = maxAge;
-        }
+        int currentAge = this.getAge(pState);
+        int nextAge = Math.min(
+                currentAge + this.getBonemealAgeIncrease(pLevel),
+                this.getMaxAge()
+        );
 
-        if(this.getAge(pState) == FIRST_STAGE_MAX_AGE && pLevel.getBlockState(pPos.above(1)).is(Blocks.AIR)) {
-            pLevel.setBlock(pPos.above(1), this.getStateForAge(nextAge), 2);
+        if (currentAge < FIRST_STAGE_MAX_AGE) {
+            pLevel.setBlock(
+                    pPos,
+                    this.getStateForAge(Math.min(nextAge, FIRST_STAGE_MAX_AGE)),
+                    2
+            );
+        } else if (currentAge == FIRST_STAGE_MAX_AGE) {
+            if (pLevel.getBlockState(pPos.above()).is(Blocks.AIR)) {
+                pLevel.setBlock(
+                        pPos.above(),
+                        this.getStateForAge(nextAge),
+                        2
+                );
+            }
         } else {
-            pLevel.setBlock(pPos, this.getStateForAge(nextAge - SECOND_STAGE_MAX_AGE), 2);
+            pLevel.setBlock(
+                    pPos,
+                    this.getStateForAge(nextAge),
+                    2
+            );
         }
     }
 
@@ -78,11 +119,11 @@ public class KaoliangCropBLock extends CropBlock {
 
     @Override
     protected ItemLike getBaseSeedId() {
-        return null;
+        return ModItems.KAOLIANG_SEEDS.get();
     }
 
     @Override
-    protected IntegerProperty getAgeProperty() {
+    public IntegerProperty getAgeProperty() {
         return AGE;
     }
 

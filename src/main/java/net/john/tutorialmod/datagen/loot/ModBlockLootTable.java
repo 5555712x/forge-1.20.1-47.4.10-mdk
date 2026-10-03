@@ -2,6 +2,7 @@ package net.john.tutorialmod.datagen.loot;
 
 import net.john.tutorialmod.block.ModBlocks;
 import net.john.tutorialmod.block.custom.CornCropBlock;
+import net.john.tutorialmod.block.custom.KaoliangCropBLock;
 import net.john.tutorialmod.item.ModItems;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
@@ -60,8 +61,27 @@ public class ModBlockLootTable extends BlockLootSubProvider {
                 .hasBlockStateProperties(ModBlocks.CORN_CROP.get())
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CornCropBlock.AGE, 5));
 
-        this.add(ModBlocks.CORN_CROP.get(), createCropDrops(ModBlocks.CORN_CROP.get(), ModItems.CORN.get(),
-                ModItems.CORN_SEEDS.get(), lootitemcondition$builder));
+        this.add(ModBlocks.CORN_CROP.get(), createCropDrops(
+                ModBlocks.CORN_CROP.get(),
+                ModItems.CORN.get(),
+                ModItems.CORN_SEEDS.get(),
+                lootitemcondition$builder
+                ));
+
+        LootItemCondition.Builder lootitemcondition$builder2 = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.KAOLIANG_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(KaoliangCropBLock.AGE, 4))
+                .or(LootItemBlockStatePropertyCondition
+                        .hasBlockStateProperties(ModBlocks.KAOLIANG_CROP.get())
+                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(KaoliangCropBLock.AGE, 8)));
+
+        this.add(ModBlocks.KAOLIANG_CROP.get(),
+                createCropDrops(
+                        ModBlocks.KAOLIANG_CROP.get(),
+                        ModItems.KAOLIANG.get(),
+                        ModItems.KAOLIANG_SEEDS.get(),
+                        lootitemcondition$builder2
+                ));
     }
 
 
@@ -117,7 +137,8 @@ public class ModBlockLootTable extends BlockLootSubProvider {
                 ModBlocks.SAPPHIRE_FENCE_GATE.get(),
                 ModBlocks.SAPPHIRE_WALL.get(),
                 ModBlocks.SAPPHIRE_DOOR.get(),
-                ModBlocks.CORN_CROP.get()
+                ModBlocks.CORN_CROP.get(),
+                ModBlocks.KAOLIANG_CROP.get()
         );
     }
 }

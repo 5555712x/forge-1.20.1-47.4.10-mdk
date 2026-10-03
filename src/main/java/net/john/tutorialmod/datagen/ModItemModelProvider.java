@@ -115,6 +115,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.CORN);
         simpleItem(ModItems.CORN_SEEDS);
         simpleItem(ModItems.ROASTED_BEETS);
+        simpleItem(ModItems.KAOLIANG);
+        simpleItem(ModItems.KAOLIANG_SEEDS);
 
         //simpleItem(ModItems.METAL_DETECTOR);
 
