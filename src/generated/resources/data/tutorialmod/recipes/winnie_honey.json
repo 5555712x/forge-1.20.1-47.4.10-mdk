@@ -11,8 +11,7 @@
   },
   "pattern": [
     " SS",
-    " SA",
-    "   "
+    " SA"
   ],
   "result": {
     "item": "tutorialmod:winnie_honey"

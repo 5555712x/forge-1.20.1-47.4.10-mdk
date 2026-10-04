@@ -1,8 +1,10 @@
-// 1.20.1	2026-10-03T16:04:52.827624	Item Models: tutorialmod
+// 1.20.1	2026-10-04T13:55:56.8165297	Item Models: tutorialmod
 ade5c3d42e76ae64995e7452d64df7d7c09b06ea assets/tutorialmod/models/item/beef_sandwich.json
+3a7211e5535930edec34dadf51af2eb41059bb1b assets/tutorialmod/models/item/blazing_flower.json
 6126e26da373f9113d9e9be875b14a0d13857444 assets/tutorialmod/models/item/corn.json
 4c5c277fa6360b149d6c3ab20584fcc4450cda27 assets/tutorialmod/models/item/corn_seeds.json
 3d431418aab9496dfd8cc40bf64d63bf12446a39 assets/tutorialmod/models/item/kaoliang.json
+5fe78efbbd2e1407812f7193d700c2d51ba4eb0d assets/tutorialmod/models/item/kaoliang_bread.json
 08a0932f783ece3613962f81d5a30bb9c5d98234 assets/tutorialmod/models/item/kaoliang_seeds.json
 d24305376f58c1ef118279a5c8f5b087a07b1d47 assets/tutorialmod/models/item/raw_sapphire.json
 730f316e09d4db33a86a1e5398374d7403cb23d1 assets/tutorialmod/models/item/roasted_beets.json

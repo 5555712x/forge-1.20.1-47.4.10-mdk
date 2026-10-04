@@ -8,8 +8,7 @@
   },
   "pattern": [
     "SSS",
-    "S S",
-    "   "
+    "S S"
   ],
   "result": {
     "item": "tutorialmod:sapphire_helmet"

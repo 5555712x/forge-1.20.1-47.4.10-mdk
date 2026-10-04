@@ -115,6 +115,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.CORN);
         simpleItem(ModItems.CORN_SEEDS);
         simpleItem(ModItems.ROASTED_BEETS);
+        simpleItem(ModItems.KAOLIANG_BREAD);
+
+
         simpleItem(ModItems.KAOLIANG);
         simpleItem(ModItems.KAOLIANG_SEEDS);
 
@@ -158,6 +161,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.SAPPHIRE_CHESTPLATE);
         trimmedArmorItem(ModItems.SAPPHIRE_LEGGINGS);
         trimmedArmorItem(ModItems.SAPPHIRE_BOOTS);
+
+
+        simpleBlockItemBlockTexture(ModBlocks.BLAZING_FLOWER);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
@@ -210,5 +216,10 @@ public class ModItemModelProvider extends ItemModelProvider {
                         new ResourceLocation(
                                 TutoriolMod.MOD_ID,
                                 "item/" + item.getId().getPath()));
+    }
+    private ItemModelBuilder simpleBlockItemBlockTexture(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(TutoriolMod.MOD_ID, "block/" + item.getId().getPath()));
     }
 }

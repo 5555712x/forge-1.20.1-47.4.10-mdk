@@ -161,7 +161,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SAPPHIRE_HELMET.get())
                 .pattern("SSS")
                 .pattern("S S")
-                .pattern("   ")
                 .define('S',Ingredient.of(ModItems.SAPPHIRE.get()))
                 .unlockedBy(getHasName(ModItems.SAPPHIRE.get()), has(ModItems.SAPPHIRE.get()))
                 .save(pWriter);
@@ -183,7 +182,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SAPPHIRE_BOOTS.get())
-                .pattern("   ")
                 .pattern("S S")
                 .pattern("S S")
                 .define('S',Ingredient.of(ModItems.SAPPHIRE.get()))
@@ -211,7 +209,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ONE_PUNCH.get())
                 .pattern(" SS")
                 .pattern(" @A")
-                .pattern("   ")
                 .define('S',Ingredient.of(Items.LEATHER))
                 .define('@',Ingredient.of(Items.NETHERITE_INGOT))
                 .define('A',Ingredient.of(Items.IRON_INGOT))
@@ -221,11 +218,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.WINNIE_HONEY.get())
                 .pattern(" SS")
                 .pattern(" SA")
-                .pattern("   ")
                 .define('S',Ingredient.of(Items.HONEY_BOTTLE))
                 .define('A',Ingredient.of(Items.SUGAR))
                 .unlockedBy(getHasName(Items.HONEY_BOTTLE), has(Items.HONEY_BOTTLE))
                 .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.KAOLIANG_BREAD.get())
+                .pattern("WWW")
+                .define('W', ModItems.KAOLIANG.get())
+                .unlockedBy(getHasName(ModItems.KAOLIANG.get()), has(ModItems.KAOLIANG.get()))
+                .save(pWriter);
+
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CORN_SEEDS.get(), 4)
                 .requires(ModItems.CORN.get())
@@ -250,4 +253,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         }
 
     }
+
+
 }

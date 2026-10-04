@@ -12,6 +12,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
 import org.apache.commons.compress.compressors.lz77support.LZ77Compressor;
 
@@ -53,6 +54,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         makeCornCrop((CropBlock) ModBlocks.CORN_CROP.get(), "corn_stage", "corn_stage");
         makeKaoliangCrop(((CropBlock) ModBlocks.KAOLIANG_CROP.get()), "kaoliang_stage_", "kaoliang_stage_");
+
+
+        simpleBlockWithItem(ModBlocks.BLAZING_FLOWER.get(), models().cross(blockTexture(ModBlocks.BLAZING_FLOWER.get()).getPath(),
+                blockTexture(ModBlocks.BLAZING_FLOWER.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.POTTED_BLAZING_FLOWER.get(), models().singleTexture("potted_blazing_flower", new ResourceLocation("flower_pot_cross"), "plant",
+                blockTexture(ModBlocks.BLAZING_FLOWER.get())).renderType("cutout"));
     }
 
     public void makeCornCrop(CropBlock block, String modelName, String textureName) {

@@ -58,11 +58,16 @@ public class ModCreativeModTabs {
                             output.accept(ModItems.MARSHMALLOW_SKEWERS.get());
                             output.accept(ModItems.BEEF_SANDWICH.get());
                             output.accept(ModItems.WINNIE_HONEY.get());
+                            output.accept(ModItems.KAOLIANG_BREAD.get());
 
                             output.accept(ModItems.CORN_SEEDS.get());
                             output.accept(ModItems.CORN.get());
                             output.accept(ModItems.KAOLIANG.get());
                             output.accept(ModItems.KAOLIANG_SEEDS.get());
+
+
+                            output.accept(ModBlocks.BLAZING_FLOWER.get());
+
 
                             //FUEL
                             output.accept(ModItems.SMALL_COAL.get());

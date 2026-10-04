@@ -2,11 +2,15 @@ package net.john.tutorialmod;
 
 import com.mojang.logging.LogUtils;
 import net.john.tutorialmod.block.ModBlocks;
+import net.john.tutorialmod.client.PlayerPunchAnimation;
 import net.john.tutorialmod.item.ModCreativeModTabs;
 import net.john.tutorialmod.item.ModItems;
 import net.john.tutorialmod.loot.ModLootModifiers;
+import net.john.tutorialmod.util.ModTags;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.CreativeModeTabRegistry;
 import net.minecraftforge.common.MinecraftForge;
@@ -49,7 +53,9 @@ public class TutoriolMod {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-
+        event.enqueueWork(() -> {
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.BLAZING_FLOWER.getId(), ModBlocks.POTTED_BLAZING_FLOWER);
+        });
     }
 
     // Add the example block item to the building blocks tab
@@ -85,7 +91,7 @@ public class TutoriolMod {
 
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            net.john.tutorialmod.client.PlayerPunchAnimation.registerFactory();
+            PlayerPunchAnimation.registerFactory();
         }
     }
 }

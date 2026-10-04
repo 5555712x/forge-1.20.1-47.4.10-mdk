@@ -33,6 +33,11 @@ public class ModBlockLootTable extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.SAPPHIRE_BLOCK.get());
         this.dropSelf(ModBlocks.RUBY_BLOCK.get());
 
+
+        this.dropSelf(ModBlocks.BLAZING_FLOWER.get());
+        this.add(ModBlocks.POTTED_BLAZING_FLOWER.get(), createPotFlowerItemTable(ModBlocks.BLAZING_FLOWER.get()));
+
+
         this.dropSelf(ModBlocks.SAPPHIRE_STAIRS.get());
         this.dropSelf(ModBlocks.SAPPHIRE_BUTTON.get());
         this.dropSelf(ModBlocks.SAPPHIRE_PRESSURE_PLATE.get());
@@ -138,7 +143,9 @@ public class ModBlockLootTable extends BlockLootSubProvider {
                 ModBlocks.SAPPHIRE_WALL.get(),
                 ModBlocks.SAPPHIRE_DOOR.get(),
                 ModBlocks.CORN_CROP.get(),
-                ModBlocks.KAOLIANG_CROP.get()
+                ModBlocks.KAOLIANG_CROP.get(),
+                ModBlocks.BLAZING_FLOWER.get(),
+                ModBlocks.POTTED_BLAZING_FLOWER.get()
         );
     }
 }

@@ -1,10 +1,12 @@
-// 1.20.1	2026-10-03T18:40:19.3401319	Loot Tables
+// 1.20.1	2026-10-04T13:46:41.1113496	Loot Tables
+dccab5cccdebb4479e90e7ebf1a5320cdd00a16b data/tutorialmod/loot_tables/blocks/blazing_flower.json
 5e9738e75f69fb2110775e6069718096601a64d4 data/tutorialmod/loot_tables/blocks/corn_crop.json
 331d5ec0c3ad6d5081907080e93a14740f77489a data/tutorialmod/loot_tables/blocks/deepslate_sapphire_ore.json
 424ea975a227aa8f24121a1cce579049e72a6886 data/tutorialmod/loot_tables/blocks/end_stone_sapphire_ore.json
 a687ecc42e151ec2e5f08b570236dd649395a218 data/tutorialmod/loot_tables/blocks/kaoliang_crop.json
 85a601ba909ccfbc002a08f92ebb58d3ab335940 data/tutorialmod/loot_tables/blocks/nether_ruby_ore.json
 4f2c68f2f8e5e8db36942e7bd25b566d94334c11 data/tutorialmod/loot_tables/blocks/nether_sapphire_ore.json
+6e2f4a19bdde2bc9939ceb3a166a2d8e4ef49867 data/tutorialmod/loot_tables/blocks/potted_blazing_flower.json
 e0d215bbde990fd2f6b925b06c967165dcb8f8df data/tutorialmod/loot_tables/blocks/ruby_block.json
 d844cbb192590a5e4278fd1a5c5906e40c594e24 data/tutorialmod/loot_tables/blocks/sapphire_block.json
 9f5a63f9e0753091ae43e39315eba445f05571cd data/tutorialmod/loot_tables/blocks/sapphire_button.json

@@ -32,6 +32,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().food(ModFoods.CORN)));
         public static final RegistryObject<Item> ROASTED_BEETS = ITEMS.register("roasted_beets",
             () -> new Item(new Item.Properties().food(ModFoods.ROASTED_BEETS)));
+        public static final RegistryObject<Item> KAOLIANG_BREAD = ITEMS.register("kaoliang_bread",
+            () -> new Item(new Item.Properties().food(ModFoods.KAOLIANG_BREAD)));
 
         public static final RegistryObject<Item> SMALL_COAL = ITEMS.register("small_coal",
             () -> new FuelItem(new Item.Properties(), 400));

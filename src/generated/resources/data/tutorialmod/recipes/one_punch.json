@@ -14,8 +14,7 @@
   },
   "pattern": [
     " SS",
-    " @A",
-    "   "
+    " @A"
   ],
   "result": {
     "item": "tutorialmod:one_punch"

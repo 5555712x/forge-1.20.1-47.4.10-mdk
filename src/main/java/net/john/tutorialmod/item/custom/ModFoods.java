@@ -3,6 +3,7 @@ package net.john.tutorialmod.item.custom;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.food.Foods;
 
 public class ModFoods {
 
@@ -16,6 +17,7 @@ public class ModFoods {
             .saturationMod(0.8f).build();
     public static final FoodProperties ROASTED_BEETS = new FoodProperties.Builder().nutrition(4)
             .saturationMod(1.0f).build();
+    public static final FoodProperties KAOLIANG_BREAD = Foods.BREAD;
 
 
 }
