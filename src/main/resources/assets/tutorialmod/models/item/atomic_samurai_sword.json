@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:item/generated",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "tutorialmod:item/atomic_samurai_sword_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "tutorialmod:item/atomic_samurai_sword_3d"
+    },
+    "ground": {
+      "parent": "tutorialmod:item/atomic_samurai_sword_3d"
+    },
+    "fixed": {
+      "parent": "tutorialmod:item/atomic_samurai_sword_3d"
+    }
+  }
+}

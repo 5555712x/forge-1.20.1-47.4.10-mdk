@@ -1,0 +1,75 @@
+package net.john.tutorialmod.events;
+
+import net.john.tutorialmod.item.custom.SpearItem;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.AABB;
+import net.minecraftforge.event.entity.player.AttackEntityEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+
+import java.util.List;
+
+@Mod.EventBusSubscriber(modid = "tutorialmod")
+public class SpearAttackHandler {
+
+    /**
+     * 攔截玩家攻擊實體的事件。
+     *
+     * AttackEntityEvent 在 Player.attack() 最開始時觸發，
+     * 早於原版的攻擊距離檢查，所以可以在這裡自行判定距離並造成傷害。
+     *
+     * 注意：這個事件只在玩家「嘗試攻擊」時觸發（即左鍵點到了某個實體的碰撞箱），
+     * 但原版的近戰距離限制（約 3 格）仍然存在於客戶端的 raycast，
+     * 所以延伸距離需要搭配伺服器端的判定。
+     */
+    @SubscribeEvent
+    public static void onPlayerAttackEntity(AttackEntityEvent event) {
+        Player player = event.getEntity();
+        ItemStack heldItem = player.getMainHandItem();
+
+        // 只處理玩家手持 SpearItem 的情況
+        if (!(heldItem.getItem() instanceof SpearItem spear)) return;
+
+        // 只在伺服器端執行，避免重複觸發
+        if (player.level().isClientSide()) return;
+
+        Level level = player.level();
+        double attackRange = spear.getAttackRange();
+
+        // 取得玩家攻擊傷害
+        double baseDamage = player.getAttributeValue(Attributes.ATTACK_DAMAGE);
+
+        // 直接被點到的目標（可能是任何 Entity）
+        net.minecraft.world.entity.Entity directTarget = event.getTarget();
+
+        // 建立以玩家視線方向延伸的攻擊判定箱
+        AABB attackBox = new AABB(
+                player.getX() - attackRange, player.getY() - 1.0, player.getZ() - attackRange,
+                player.getX() + attackRange, player.getY() + 2.5, player.getZ() + attackRange
+        ).move(
+                player.getLookAngle().x * (attackRange / 2.0),
+                0,
+                player.getLookAngle().z * (attackRange / 2.0)
+        );
+
+        // 掃描範圍內所有 LivingEntity，包含直接目標和周圍的敵人
+        List<LivingEntity> targets = level.getEntitiesOfClass(
+                LivingEntity.class,
+                attackBox,
+                // 排除玩家自己；直接目標讓原版邏輯處理（不取消事件）
+                e -> e != player && e != directTarget && e.isAlive()
+        );
+
+        for (LivingEntity target : targets) {
+            // 用實際距離再過濾一次（AABB 是正方形，邊角會比實際距離遠）
+            if (player.distanceTo(target) > attackRange) continue;
+            target.hurt(level.damageSources().playerAttack(player), (float) baseDamage);
+        }
+
+        // 不取消事件，讓原版繼續處理直接目標的傷害和耐久扣除
+    }
+}
