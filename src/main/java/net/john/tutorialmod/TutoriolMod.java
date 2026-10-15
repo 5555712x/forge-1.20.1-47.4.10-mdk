@@ -6,6 +6,7 @@ import net.john.tutorialmod.client.PlayerPunchAnimation;
 import net.john.tutorialmod.item.ModCreativeModTabs;
 import net.john.tutorialmod.item.ModItems;
 import net.john.tutorialmod.loot.ModLootModifiers;
+import net.john.tutorialmod.sound.ModSounds;
 import net.john.tutorialmod.util.ModTags;
 import net.john.tutorialmod.villager.ModVillager;
 import net.minecraft.world.item.CreativeModeTab;
@@ -46,6 +47,7 @@ public class TutoriolMod {
         ModLootModifiers.register(modEventBus);
         ModVillager.register(modEventBus);
 
+        ModSounds.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

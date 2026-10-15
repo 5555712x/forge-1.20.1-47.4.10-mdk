@@ -3,7 +3,9 @@ package net.john.tutorialmod.events;
 
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.john.tutorialmod.TutoriolMod;
+import net.john.tutorialmod.block.ModBlocks;
 import net.john.tutorialmod.item.ModItems;
+import net.john.tutorialmod.villager.ModVillager;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.item.EnchantedBookItem;
@@ -86,6 +88,42 @@ public class ModEvents {
                     new ItemStack(Items.EMERALD, 22),
                     new ItemStack(ModItems.SAPPHIRE_HELMET.get(), 1),
                     20, 8, 0.2f));
+        }
+
+        if (event.getType() == ModVillager.SOUND_MASTER.get()) {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+
+            //Level 1
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 5),
+                    new ItemStack(ModBlocks.SOUND_BLOCK.get()),
+                    3, 2, 0.02f));
+
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 8),
+                    new ItemStack(ModBlocks.SOUND_BLOCK.get()),
+                    15, 2, 0.01f));
+
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 20),
+                    new ItemStack(Items.NOTE_BLOCK),
+                    15, 10, 0.01f));
+
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 15),
+                    new ItemStack(Items.NOTE_BLOCK),
+                    10, 25, 0.01f));
+
+            trades.get(4).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 8),
+                    new ItemStack(Items.NOTE_BLOCK),
+                    8, 40, 0.01f));
+
+            trades.get(5).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 3),
+                    new ItemStack(Items.NOTE_BLOCK),
+                    5, 50, 0.01f));
+
         }
 
     }
