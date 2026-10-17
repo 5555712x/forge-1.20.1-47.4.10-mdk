@@ -5,6 +5,7 @@ import net.john.tutorialmod.block.custom.CornCropBlock;
 import net.john.tutorialmod.block.custom.KaoliangCropBLock;
 import net.john.tutorialmod.block.custom.SoundBlock;
 import net.john.tutorialmod.item.ModItems;
+import net.john.tutorialmod.sound.ModSounds;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -35,7 +36,7 @@ public class ModBlocks {
 
 
     public static final RegistryObject<Block> SOUND_BLOCK = registerBlock("sound_block",
-            () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST).noLootTable()));
+            () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.SOUND_BLOCK_SOUNDS).noLootTable()));
 
 
     public static final RegistryObject<Block> SAPPHIRE_STAIRS = registerBlock("sapphire_stairs",
