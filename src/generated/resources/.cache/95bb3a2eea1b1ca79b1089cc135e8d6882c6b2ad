@@ -1,0 +1,7 @@
+// 1.20.1	2026-09-28T21:27:48.4759938	Global Loot Modifiers : tutorialmod
+a9e70e56d1c445b89f2cb4ab017b2e1a3694bb42 data/forge/loot_modifiers/global_loot_modifiers.json
+60c88407df6035f038615bda90d90ca01edc1556 data/tutorialmod/loot_modifiers/metal_detector_from_suspicious_sand.json
+86cca58fdae75a1c7b654cd39ca6302c5e3d43b1 data/tutorialmod/loot_modifiers/one_punch_from_jungle_temples.json
+e3339406e59940fc8657837e1c228dab395d2975 data/tutorialmod/loot_modifiers/sapphire_from_deepslate.json
+be70afcc4fca0ad0b6deaecbbc8b8e67806d2c92 data/tutorialmod/loot_modifiers/sapphire_from_drowned.json
+9e1762f9d6b0d2efffc2cf313c5cf40ead7c2c80 data/tutorialmod/loot_modifiers/sapphire_from_stone.json

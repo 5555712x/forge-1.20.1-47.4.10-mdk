@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "@": {
+      "item": "minecraft:stick"
+    },
+    "A": {
+      "item": "minecraft:stone_button"
+    },
+    "S": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "  S",
+    " S ",
+    "@A "
+  ],
+  "result": {
+    "item": "tutorialmod:the_block_sword"
+  },
+  "show_notification": true
+}

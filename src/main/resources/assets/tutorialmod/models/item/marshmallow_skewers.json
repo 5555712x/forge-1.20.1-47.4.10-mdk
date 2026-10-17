@@ -1,0 +1,22 @@
+{
+  "parent": "minecraft:item/generated",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "tutorialmod:item/marshmallow_skewers_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "tutorialmod:item/marshmallow_skewers_2d"
+    },
+    "ground": {
+      "parent": "tutorialmod:item/marshmallow_skewers_2d"
+    },
+    "fixed": {
+      "parent": "tutorialmod:item/marshmallow_skewers_2d"
+    }
+  },
+  "textures": {
+    "layer0": "tutorialmod:item/marshmallow_skewers",
+    "particle": "tutorialmod:item/marshmallow_skewers"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "@": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "A": {
+      "item": "minecraft:iron_ingot"
+    },
+    "S": {
+      "item": "minecraft:leather"
+    }
+  },
+  "pattern": [
+    " SS",
+    " @A"
+  ],
+  "result": {
+    "item": "tutorialmod:one_punch"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "S": {
+      "item": "tutorialmod:sapphire"
+    }
+  },
+  "pattern": [
+    "SS ",
+    "S# ",
+    " # "
+  ],
+  "result": {
+    "item": "tutorialmod:sapphire_axe"
+  },
+  "show_notification": true
+}
