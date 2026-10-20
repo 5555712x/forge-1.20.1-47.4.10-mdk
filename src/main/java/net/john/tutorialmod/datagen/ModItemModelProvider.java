@@ -118,6 +118,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.KAOLIANG_BREAD);
 
 
+        simpleItem(ModItems.MEGALOVANIA_MUSIC_DISC);
+        simpleItem(ModItems.LAST_BREATH_MUSIC_DISC);
+        simpleItem(ModItems.NEVER_BE_ALONE_MUSIC_DISC);
+
+
         simpleItem(ModItems.KAOLIANG);
         simpleItem(ModItems.KAOLIANG_SEEDS);
 

@@ -60,6 +60,10 @@ public class ModCreativeModTabs {
                             output.accept(ModItems.WINNIE_HONEY.get());
                             output.accept(ModItems.KAOLIANG_BREAD.get());
 
+                            output.accept(ModItems.MEGALOVANIA_MUSIC_DISC.get());
+                            output.accept(ModItems.LAST_BREATH_MUSIC_DISC.get());
+                            output.accept(ModItems.NEVER_BE_ALONE_MUSIC_DISC.get());
+
                             output.accept(ModItems.CORN_SEEDS.get());
                             output.accept(ModItems.CORN.get());
                             output.accept(ModItems.KAOLIANG.get());

@@ -3,6 +3,7 @@ package net.john.tutorialmod.item;
 import net.john.tutorialmod.TutoriolMod;
 import net.john.tutorialmod.block.ModBlocks;
 import net.john.tutorialmod.item.custom.*;
+import net.john.tutorialmod.sound.ModSounds;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -75,6 +76,13 @@ public class ModItems {
         // 原版預設值是 3.0，這裡用 AttributeModifier 加上額外 2.0（總共 5 格）
         public static final RegistryObject<Item> SAPPHIRE_SPEAR = ITEMS.register("sapphire_spear",
             () -> new SpearItem(ModToolTiers.SAPPHIRE, 5, -2.75f, 5.0, new Item.Properties()));
+
+        public static final RegistryObject<Item> MEGALOVANIA_MUSIC_DISC = ITEMS.register("megalovania_music_disc",
+            () -> new RecordItem(6, ModSounds.MEGALOVANIA, new Item.Properties().stacksTo(1), 3120));
+        public static final RegistryObject<Item> LAST_BREATH_MUSIC_DISC = ITEMS.register("last_breath_music_disc",
+            () -> new RecordItem(6, ModSounds.LAST_BREATH, new Item.Properties().stacksTo(1), 4840));
+        public static final RegistryObject<Item> NEVER_BE_ALONE_MUSIC_DISC = ITEMS.register("never_be_alone_music_disc",
+            () -> new RecordItem(6, ModSounds.NEVER_BE_ALONE, new Item.Properties().stacksTo(1), 3980));
 
 
         // 藍寶石盔甲：使用 ModArmorItem，讓 ArmorEffectHandler 能識別材質並套用效果

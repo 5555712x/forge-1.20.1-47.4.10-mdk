@@ -34,5 +34,29 @@
     "sounds": [
       "tutorialmod:sound_block_fall"
     ]
+  },
+  "megalovania": {
+    "sounds": [
+      {
+        "name": "tutorialmod:megalovania",
+        "stream": true
+      }
+    ]
+  },
+  "last_breath": {
+    "sounds": [
+      {
+        "name": "tutorialmod:last_breath",
+        "stream": true
+      }
+    ]
+  },
+  "never_be_alone": {
+    "sounds": [
+      {
+        "name": "tutorialmod:never_be_alone",
+        "stream": true
+      }
+    ]
   }
 }

@@ -21,6 +21,10 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> SOUND_BLOCK_PLACE = registerSoundEvents("sound_block_place");
     public static final RegistryObject<SoundEvent> SOUND_BLOCK_HIT = registerSoundEvents("sound_block_hit");
 
+    public static final RegistryObject<SoundEvent > MEGALOVANIA = registerSoundEvents("megalovania");
+    public static final RegistryObject<SoundEvent > LAST_BREATH = registerSoundEvents("last_breath");
+    public static final RegistryObject<SoundEvent > NEVER_BE_ALONE = registerSoundEvents("never_be_alone");
+
 
     public static final ForgeSoundType SOUND_BLOCK_SOUNDS = new ForgeSoundType(1f, 1f,
             ModSounds.SOUND_BLOCK_BREAK, ModSounds.SOUND_BLOCK_STEP, ModSounds.SOUND_BLOCK_PLACE,

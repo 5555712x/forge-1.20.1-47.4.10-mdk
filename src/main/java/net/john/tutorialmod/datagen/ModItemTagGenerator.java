@@ -24,6 +24,12 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.SAPPHIRE_CHESTPLATE.get(),
                         ModItems.SAPPHIRE_LEGGINGS.get(),
                         ModItems.SAPPHIRE_BOOTS.get());
+        this.tag(ItemTags.MUSIC_DISCS)
+                .add(ModItems.MEGALOVANIA_MUSIC_DISC.get())
+                .add(ModItems.LAST_BREATH_MUSIC_DISC.get())
+                .add(ModItems.NEVER_BE_ALONE_MUSIC_DISC.get());
 
+        this.tag(ItemTags.CREEPER_DROP_MUSIC_DISCS)
+                .add(ModItems.MEGALOVANIA_MUSIC_DISC.get());
     }
 }

@@ -45,6 +45,14 @@
   "block.tutorialmod.sapphire_trapdoor": "藍寶石活板門",
 
 
+  "item.tutorialmod.megalovania_music_disc": "Megalovania唱片",
+  "item.tutorialmod.last_breath_music_disc": "last breath唱片",
+  "item.tutorialmod.never_be_alone_music_disc": "never be alone唱片",
+  "item.tutorialmod.megalovania_music_disc.desc": "Toby Fox - megalovania (CC0)",
+  "item.tutorialmod.last_breath_music_disc.desc": "Toby Fox - last_breath (CC0)",
+  "item.tutorialmod.never_be_alone_music_disc.desc": "Shadrow - never_be_alone (CC0)",
+
+
   "item.tutorialmod.sapphire_sword": "藍寶石劍",
   "item.tutorialmod.sapphire_spear": "藍寶石矛",
   "item.tutorialmod.sapphire_pickaxe": "藍寶石鎬",

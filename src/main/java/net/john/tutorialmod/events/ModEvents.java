@@ -93,26 +93,41 @@ public class ModEvents {
         if (event.getType() == ModVillager.SOUND_MASTER.get()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
 
-            //Level 1
+
             trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 5),
                     new ItemStack(ModBlocks.SOUND_BLOCK.get()),
                     3, 2, 0.02f));
 
             trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 8),
-                    new ItemStack(ModBlocks.SOUND_BLOCK.get()),
-                    15, 2, 0.01f));
+                    new ItemStack(Items.EMERALD, 15),
+                    new ItemStack(Items.NOTE_BLOCK),
+                    5, 2, 0.01f));
 
             trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 20),
-                    new ItemStack(Items.NOTE_BLOCK),
-                    15, 10, 0.01f));
+                    new ItemStack(Items.EMERALD, 10),
+                    new ItemStack(ModItems.MEGALOVANIA_MUSIC_DISC.get()),
+                    1, 50, 0.01f));
+
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 10),
+                    new ItemStack(ModItems.NEVER_BE_ALONE_MUSIC_DISC.get()),
+                    1, 50, 0.01f));
+
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 10),
+                    new ItemStack(ModItems.LAST_BREATH_MUSIC_DISC.get()),
+                    1, 50, 0.01f));
 
             trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 15),
                     new ItemStack(Items.NOTE_BLOCK),
                     10, 25, 0.01f));
+
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 5),
+                    new ItemStack(Items.GOAT_HORN),
+                    3, 25, 0.01f));
 
             trades.get(4).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 8),
